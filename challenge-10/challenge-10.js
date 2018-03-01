@@ -15,7 +15,7 @@
     console.log( five + ' é número?', typeof five === 'number' );
     
 
-    var concat = String(10 + 10);
+    var concat = String(10) + 10;
     console.log( '"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string' );
 
     /*
@@ -47,10 +47,7 @@
      * - O desafio é fazer o retorno sem usar "if" ou "switch".
      */
     function isOperatorValid(operator) {
-        if (operator === '+' || operator === '-' || operator === '*' || operator === '/' || operator === '%') {
-            return true;
-        }
-        return false;
+        return !!operation[operator];
     };
 
     /*
