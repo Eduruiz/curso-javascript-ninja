@@ -33,7 +33,6 @@
         '*': function(x, y) { return x * y },
         '/': function(x, y) { return x / y },
         '%': function(x, y) { return x % y },
-        'test': function() { return true }
     }
 
     /*
@@ -146,17 +145,70 @@
      * divisão e resto. Crie variáveis com os nomes "subtraction",
      * "multiplication", "division" e "mod".
      */
+    //subtraction
     var operationSignal = '-';
     var subtraction = calculator(operationSignal);
+    
+    if (!subtraction) {
+        return console.log(showErrorMessage(operationSignal));
+    }
 
+    var number1 = 10;
+    var number2 = 5;
+
+    console.log(
+        showOperationMessage(operationSignal, number1, number2),
+        subtraction(number1, number2)
+    );
+
+
+    //multiplication
     var operationSignal = '*';
     var multiplication = calculator(operationSignal);
+    
+    if (!multiplication) {
+        return console.log(showErrorMessage(operationSignal));
+    }
 
+    var number1 = 10;
+    var number2 = 5;
+
+    console.log(
+        showOperationMessage(operationSignal, number1, number2),
+        multiplication(number1, number2)
+    );
+
+    //division
     var operationSignal = '/';
     var division = calculator(operationSignal);
+
+    if (!division) {
+        return console.log(showErrorMessage(operationSignal));
+    }
+
+    var number1 = 50;
+    var number2 = 2;
+
+    console.log(
+        showOperationMessage(operationSignal, number1, number2),
+        division(number1, number2)
+    );
     
+    //mod
     var operationSignal = '%';
     var mod = calculator(operationSignal);
+
+    if (!mod) {
+        return console.log(showErrorMessage(operationSignal));
+    }
+
+    var number1 = 50;
+    var number2 = 51;
+
+    console.log(
+        showOperationMessage(operationSignal, number1, number2),
+        mod(number1, number2)
+    );
    
     
     /*
