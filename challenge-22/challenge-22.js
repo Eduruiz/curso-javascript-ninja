@@ -39,8 +39,9 @@
     os parâmetros passados para essa função.
     */
     function sum() {
+        console.log(arguments);
         var sum = Array.prototype.reduce.call(arguments, function(acc, val){
-            return +acc + +val;
+            return +acc + +val; // unary operator, to sum values instead of concat them
         });
         return sum;
     }
